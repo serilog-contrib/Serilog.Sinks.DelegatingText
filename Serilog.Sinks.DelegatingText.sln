@@ -15,7 +15,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentat
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SANDBOX", "src\SANDBOX\SANDBOX.csproj", "{59DDFA81-D5C0-4A2E-9A47-5A3199E056DE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SANDBOX", "src\SANDBOX\SANDBOX.csproj", "{59DDFA81-D5C0-4A2E-9A47-5A3199E056DE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{36593561-6CCA-4D18-9927-F535E5E1144A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Serilog.Sinks.DelegatingText.Tests", "tests\Serilog.Sinks.DelegatingText.Tests\Serilog.Sinks.DelegatingText.Tests.csproj", "{2F4D6AD5-22FC-4867-9BEB-963381FB685D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,9 +35,16 @@ Global
 		{59DDFA81-D5C0-4A2E-9A47-5A3199E056DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{59DDFA81-D5C0-4A2E-9A47-5A3199E056DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{59DDFA81-D5C0-4A2E-9A47-5A3199E056DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F4D6AD5-22FC-4867-9BEB-963381FB685D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F4D6AD5-22FC-4867-9BEB-963381FB685D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F4D6AD5-22FC-4867-9BEB-963381FB685D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F4D6AD5-22FC-4867-9BEB-963381FB685D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2F4D6AD5-22FC-4867-9BEB-963381FB685D} = {36593561-6CCA-4D18-9927-F535E5E1144A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A02A0B18-6E5E-469C-BDD7-601356B35D45}
