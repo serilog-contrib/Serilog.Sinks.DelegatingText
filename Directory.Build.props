@@ -1,0 +1,8 @@
+<Project>
+    <PropertyGroup>
+        <Authors>Victor Vogelpoel</Authors>
+        <Company>Dramatic Development</Company>
+        <Copyright>Copyright (c) 2021 Dramatic Development - Victor Vogelpoel</Copyright>
+        <FileVersion>$([System.DateTime]::Now.ToString("yyyy.MM.dd.HHmm"))</FileVersion>
+    </PropertyGroup>
+</Project>

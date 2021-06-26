@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.1;netstandard2.0;netstandard1.3;netstandard1.0;net45;net46</TargetFrameworks>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <PublicSign Condition=" '$(OS)' != 'Windows_NT' ">true</PublicSign>
+    <PackageId>Serilog.Sinks.DelegatingText</PackageId>
+    <PackageTags>serilog;logging;semantic;structured</PackageTags>
+    <PackageIcon>serilog-sink-nuget.png</PackageIcon>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <TreatSpecificWarningsAsErrors />
+    <RootNamespace>Serilog</RootNamespace>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageProjectUrl>https://github.com/victorvogelpoel/Serilog.Sinks.DelegatingText</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/victorvogelpoel/Serilog.Sinks.DelegatingText</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <Description>A Serilog sink to write formatted log events to a delegate</Description>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>Serilog.Sinks.DelegatingText.snk</AssemblyOriginatorKeyFile>
+
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Serilog" Version="2.10.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="serilog-sink-nuget.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="Pack" Condition=" '$(Configuration)' == 'Release'">
+    <RemoveDir Directories="..\..\current" />
+    <Copy SourceFiles="$(OutputPath)$(PackageId).$(PackageVersion).nupkg" DestinationFolder="..\..\current" />
+  </Target>
+
+</Project>

@@ -1,0 +1,20 @@
+name: Publish current to nuget
+on:
+  workflow_dispatch:
+  push:
+    branches: [ release ]
+    paths: ["current/**"]
+
+jobs:
+  publish-nupkg:
+    timeout-minutes: 10
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Publish to nuget
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 3.1.101
+    - name: Push packages to registry
+      run: dotnet nuget push current/*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json --skip-duplicate
