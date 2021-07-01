@@ -13,12 +13,13 @@
     <TreatSpecificWarningsAsErrors />
     <RootNamespace>Serilog</RootNamespace>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <PackageProjectUrl>https://github.com/victorvogelpoel/Serilog.Sinks.DelegatingText</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/victorvogelpoel/Serilog.Sinks.DelegatingText</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/serilog-contrib/Serilog.Sinks.DelegatingText</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/serilog-contrib/Serilog.Sinks.DelegatingText</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <Description>A Serilog sink to write formatted log events to a delegate</Description>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>Serilog.Sinks.DelegatingText.snk</AssemblyOriginatorKeyFile>
+    <Version>1.0.1</Version>
 
   </PropertyGroup>
 
