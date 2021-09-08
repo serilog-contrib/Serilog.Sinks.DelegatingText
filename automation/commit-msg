@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+if ! head -1 "$1" | grep -qE "^(build|chore|ci|docs|feat|fix|perf|refactor|resource|revert|style|test)(\(.+?\))?: .{1,}$"; then
+    echo "Aborting commit. Your commit message header does not adhere to the convention." >&2
+    echo "<type>(<scope>): <short summary>" >&2
+    echo "<BLANK LINE>" >&2
+    echo "<body>" >&2
+    echo "<BLANK LINE>" >&2
+    echo "<footer>" >&2
+    exit 1
+fi
+if ! head -1 "$1" | grep -qE "^.{1,50}$"; then
+    echo "Aborting commit. Your commit message header is too long." >&2
+    exit 1
+fi

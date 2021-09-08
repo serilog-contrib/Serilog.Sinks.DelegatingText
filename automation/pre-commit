@@ -1,0 +1,13 @@
+#!/bin/bash
+#
+# To prevent debug code from being accidentally committed, simply add a comment near your
+# debug code containing the keyword !NOCOMMIT and this script will abort the commit.
+#
+if git commit -v --dry-run | grep '!NOCOMMIT' >/dev/null 2>&1
+then
+  echo "BLOCKED committing a file because it is flagged."
+  echo "Remove the !NOCOMMIT string and try again."
+  exit 1
+else
+  exit 0
+fi

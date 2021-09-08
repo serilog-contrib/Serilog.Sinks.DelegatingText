@@ -34,6 +34,13 @@
     </None>
   </ItemGroup>
 
+  <Target Name="CopyCustomContent" AfterTargets="AfterBuild">
+    <ItemGroup>
+      <_CustomFiles Include="..\..\automation\commit-msg;..\..\automation\pre-commit" />
+    </ItemGroup>
+    <Copy SourceFiles="@(_CustomFiles)" DestinationFolder="./../../.git/hooks" />
+  </Target>
+
   <Target Name="PostBuild" AfterTargets="Pack" Condition=" '$(Configuration)' == 'Release'">
     <RemoveDir Directories="..\..\current" />
     <Copy SourceFiles="$(OutputPath)$(PackageId).$(PackageVersion).nupkg" DestinationFolder="..\..\current" />
