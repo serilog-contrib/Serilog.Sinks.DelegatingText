@@ -2,7 +2,7 @@
 
 [![Nuget status](https://img.shields.io/nuget/v/Serilog.Sinks.DelegatingText.svg)](https://www.nuget.org/packages/Serilog.Sinks.DelegatingText)
 
-A Serilog sink wrapper to write formatted log events to a delegate.
+A Serilog sink wrapper to write formatted log events to an Action delegate.
 
 To use the sink, install the **Serilog.Sinks.DelegatingText nupkg** into your solution; see below or browse to the [sample sandbox code in this repository](src/SANDBOX/Program.cs) for pointers how to use it. And here is the nuget.org page for [Serilog.Sinks.DelegatingText](https://www.nuget.org/packages/Serilog.Sinks.DelegatingText/).
 
